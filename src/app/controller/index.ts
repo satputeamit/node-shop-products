@@ -24,7 +24,8 @@ export async function deleteProductById(
   res: Response,
   next: NextFunction
 ): Promise<void> {
-  const data = await deleteProduct(req.params.id);
+
+  const data = await deleteProduct(req.params.id, req.body.user_id);
   res.json(data);
 }
 

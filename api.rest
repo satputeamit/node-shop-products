@@ -7,7 +7,8 @@ Content-Type: application/json
     "description":"16GB RAM, 1TB SSD, RTX3060",
     "amount":125000,    
     "pictures":["NA"],
-    "status":1   
+    "status":1,
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"   
 }
 
 ###
@@ -17,13 +18,17 @@ GET http://localhost:3002/products
 
 ###
 #Delete 
-DELETE http://localhost:3002/deleteproduct/64dc942618db578a03df6256
+DELETE http://localhost:3002/deleteproduct/64dcb92b899633050854cb4c
+Content-Type: application/json
 
+{
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"
+}
 ###
 
 #update
 
-PATCH  http://localhost:3002/updateproduct/64dca5e5f0a409459ca987fa
+PATCH  http://localhost:3002/updateproduct/64dcbbfe5510beacacbe6e11
 Content-Type: application/json
 
 {
@@ -31,5 +36,6 @@ Content-Type: application/json
     "description":"16GB RAM, 1TB SSD, RTX2070TI",
     "amount":70000,    
     "pictures":["NA"],
-    "status":1   
+    "status":1,
+    "user_id":"e8734c48-aa94-4143-8374-75d92eca4bd2"   
 }

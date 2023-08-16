@@ -5,7 +5,8 @@ let productSchema = new mongoose.Schema({
   description: String,
   amount: Number,  
   pictures: [String],
-  status: Number
+  status: Number,
+  user_id:String
 });
 
 export let ProductModel = mongoose.model('Products', productSchema);
