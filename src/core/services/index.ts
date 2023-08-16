@@ -20,7 +20,7 @@ export async function addProduct(productObj: AddProduct): Promise<any> {
 
 }
 
-export async function getProducts(){
+export async function getProducts():Promise<any> {
     let products = await ProductModel.find()
     return{
         message: "Successful",
