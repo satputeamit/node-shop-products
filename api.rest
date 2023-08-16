@@ -10,3 +10,7 @@ Content-Type: application/json
     "status":1   
 }
 
+###
+
+# GET Products list
+GET http://localhost:3002/products

@@ -3,8 +3,7 @@ import { ProductModel } from "../../database/schemas/products"
 
 
 export async function addProduct(productObj: AddProduct): Promise<any> {
-    console.log(productObj)
-    // const product = await knex("products").insert(productObj).returning("*");
+    
     let msg = new ProductModel({
         name: productObj.name,
         description: productObj.description,
@@ -13,28 +12,20 @@ export async function addProduct(productObj: AddProduct): Promise<any> {
         status:1
     });
 
-    let data = await msg.save()
-    console.log("===>", data);
+    let data = await msg.save()   
     return {
         message: "Product added successfully...",
         data: data,
-    };
-    //   msg
-    //     .save()
-    //     .then((doc) => {
-    //       console.log(doc);
-    //       return {
-    //         message: "Product added successfully...",
-    //         data: doc,
-    //     };
-    //     })
-    //     .catch((err) => {
-    //         return {
-    //             message: "Product added successfully...",
-    //             error: err,
-    //         };
-    //     });
+    };   
 
+}
+
+export async function getProducts(){
+    let products = await ProductModel.find()
+    return{
+        message: "Successful",
+        data: products,
+    }
 
 }
 
