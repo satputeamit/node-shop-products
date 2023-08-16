@@ -1,0 +1,12 @@
+# ADD USER
+POST http://localhost:3002/addproduct
+Content-Type: application/json
+
+{
+    "name":"Laptop",
+    "description":"16GB RAM, 1TB SSD, RTX3060",
+    "amount":125000,    
+    "pictures":["NA"],
+    "status":1   
+}
+
