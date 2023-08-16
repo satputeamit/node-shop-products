@@ -14,3 +14,22 @@ Content-Type: application/json
 
 # GET Products list
 GET http://localhost:3002/products
+
+###
+#Delete 
+DELETE http://localhost:3002/deleteproduct/64dc942618db578a03df6256
+
+###
+
+#update
+
+PATCH  http://localhost:3002/updateproduct/64dca5e5f0a409459ca987fa
+Content-Type: application/json
+
+{
+    "name":"Laptop",
+    "description":"16GB RAM, 1TB SSD, RTX2070TI",
+    "amount":70000,    
+    "pictures":["NA"],
+    "status":1   
+}

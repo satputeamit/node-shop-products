@@ -1,4 +1,4 @@
-import { addProduct, getProducts } from "../../core/services";
+import { addProduct, deleteProduct, getProducts, updateProduct } from "../../core/services";
 import { Request, Response, NextFunction } from "express";
 
 export async function addNewProduct(
@@ -16,6 +16,24 @@ export async function getAllProducts(
   next: NextFunction
 ): Promise<void> {
   const data = await getProducts();
+  res.json(data);
+}
+
+export async function deleteProductById(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  const data = await deleteProduct(req.params.id);
+  res.json(data);
+}
+
+export async function updateProductRecord(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  const data = await updateProduct(req.params.id, req.body);
   res.json(data);
 }
 
