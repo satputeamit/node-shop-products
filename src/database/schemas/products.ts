@@ -7,7 +7,7 @@ let productSchema = new mongoose.Schema({
   pictures: [String],
   status: Number,
   user_id:String
-});
+}, {timestamps: true});
 
 export let ProductModel = mongoose.model('Products', productSchema);
 

@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "export $(cat .env) && npx knex migrate:latest --knexfile=src/database/knexfile.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",   
     "dev": "export $(cat .env) && ts-node-dev --respawn src/app/index.ts"
   },
   "repository": {

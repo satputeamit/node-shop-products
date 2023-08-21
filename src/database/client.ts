@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
-const server = '127.0.0.1:27017';
-const database = 'node_shop_products';
+const mongoConnStr = `${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}`
+const server = mongoConnStr;
+const database = process.env.DATABASE_NAME;
+
 
 
 export const connectDB = async () => {
